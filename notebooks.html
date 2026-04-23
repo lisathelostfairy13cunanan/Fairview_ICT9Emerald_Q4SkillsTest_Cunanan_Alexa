@@ -13,13 +13,13 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Urbanist';
+            font-family: 'Verdana';
         }
 
         body {
             display: flex;
             height: 100vh;
-            background-image: url(BG2.png);
+            background-image: url(https://i.pinimg.com/originals/c7/66/84/c76684743f66c3bad8a53b37fd713242.gif);
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -27,10 +27,10 @@
         }
 
         .sidebar {
-            width: 350px;
+            width: 300px;
             height: 100vh;
             background-color: rgba(0, 0, 0, 0.625);
-            color: white;
+            color: rgb(37, 3, 3);
             display: flex;
             flex-direction: column;
             padding: 20px;
@@ -52,14 +52,13 @@
         }
 
         .navlinks a {
-            text-decoration: none;
-            color: white;
+            color: rgb(247, 200, 200);
             padding: 10px;
-            border-radius: 8px;
+            border-radius: 6px;
         }
 
         .container {
-            width: 1000px;
+            width: 850px;
         }
 
         h5 {
@@ -68,7 +67,7 @@
 
         .VNimg {
             height: 100px;
-            border-radius: 5px;
+            border-radius: 6px;
         }
 
         .card {
@@ -87,15 +86,16 @@
 
     <div class="sidebar">
         <div class="logo">
-            <img src="obmc logo.webp" alt="">
+           <img src="https://images.squarespace-cdn.com/content/v1/664c7ae50eea9c731b37e817/8b5611eb-ff3a-407f-9adc-e116a23373fc/OBMC+LOGO+2024-04.png" style="width: 150px; height: auto;" alt="Logo">
         </div>
 
         <div class="navlinks">
-            <a href="#">Dashboard</a>
-            <a href="notebooks.html">Virtual Notebooks</a>
-            <a href="#">Tasks</a>
-            <a href="#">Profile</a>
-            <a href="index.html">Logout</a>
+            <a href="#">DASHBOARD</a>
+            <a href="notebooks.html">VIRTUAL NOTEBOOKS</a>
+            <a href="#">CLASSFEED</a>
+            <a href="#">CLASSFILE</a>
+            <a href="#">CALENDAR</a>
+            <a href="index.html">LOG OUT</a>
         </div>
     </div>
 
@@ -104,11 +104,10 @@
 
             <div class="col-lg-4 col-md-6 d-flex">
                 <div class="card p-4 w-100" onclick="showAlert()">
-                    <h5>ENGLISH 9-JADE AY 2526</h5>
-                    <img src="https://storage.googleapis.com/oa_disk001/obfairview/67/classfeed/3553/cover_photo/1753925262-2513.png" class="VNimg">
+                    <h5> ENGLISH 9 - Emerald AY 2526 </h5>
+                    <img src="https://storage.googleapis.com/oa_disk001/obfairview/67/classfeed/3553/cover_photo/1753925262-2513.png">
                     <p>
                         2025-2026<br>
-                        --<br>
                         KRISTIN JOY AVILA
                     </p>
                 </div>
@@ -116,47 +115,21 @@
 
             <div class="col-lg-4 col-md-6 d-flex">
                 <div class="card p-4 w-100" onclick="showAlert()">
-                    <h5>FILIPINO 9-EMERALD AY 2526</h5>
-                    <img src="https://storage.googleapis.com/oa_disk001/obfairview/67/classfeed/3627/cover_photo/1753929592-2722.png" class="VNimg">
+                    <h5> FILIPINO 9 - Emerald AY 2526 </h5>
+                    <img src="https://storage.googleapis.com/oa_disk001/obfairview/67/classfeed/3627/cover_photo/1753929592-2722.png">
                     <p>
                         2025-2026<br>
-                        --<br>
                         JEMIMA NICOLE FRANCISCO
                     </p>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 d-flex">
+             <div class="col-lg-4 col-md-6 d-flex">
                 <div class="card p-4 w-100" onclick="showAlert()">
-                    <h5>SCIENCE 9-EMERALD AY 2526</h5>
-                    <img src="https://storage.googleapis.com/oa_disk001/obfairview/67/classfeed/3560/cover_photo/1753925577-1020.jpg" class="VNimg">
+                    <h5> MATH 9 - Emerald AY 2526 </h5>
+                    <img src="https://storage.googleapis.com/oa_disk001/obfairview/67/classfeed/3717/cover_photo/1754011616-914.png">
                     <p>
                         2025-2026<br>
-                        --<br>
-                        MA. JILLIAN TALAVERA
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 d-flex">
-                <div class="card p-4 w-100" onclick="showAlert()">
-                    <h5>ICT 9-EMERALDAY 2526</h5>
-                    <img src="https://storage.googleapis.com/oa_disk001/obfairview/67/classfeed/3642/cover_photo/1753933585-719.png" class="VNimg">
-                    <p>
-                        2025-2026<br>
-                        --<br>
-                        RENN SANTOS
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 d-flex">
-                <div class="card p-4 w-100" onclick="showAlert()">
-                    <h5>MATH 9-EMERALD AY 2526</h5>
-                    <img src="https://storage.googleapis.com/oa_disk001/obfairview/67/classfeed/3717/cover_photo/1754011616-914.png" class="VNimg">
-                    <p>
-                        2025-2026<br>
-                        --<br>
                         CALEB VERBA
                     </p>
                 </div>
@@ -164,12 +137,89 @@
 
             <div class="col-lg-4 col-md-6 d-flex">
                 <div class="card p-4 w-100" onclick="showAlert()">
-                    <h5>TLE 9-EMERALD AY 2526</h5>
-                    <img src="https://storage.googleapis.com/oa_disk001/obfairview/67/classfeed/3678/cover_photo/1753944535-2116.png" class="VNimg">
+                    <h5> SCIENCE 9 - Emerald AY 2526 </h5>
+                    <img src="https://storage.googleapis.com/oa_disk001/obfairview/67/classfeed/3560/cover_photo/1753925577-1020.jpg">
                     <p>
                         2025-2026<br>
-                        --<br>
+                        JESSICA MENDARO
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex">
+                <div class="card p-4 w-100" onclick="showAlert()">
+                    <h5> SOCIAL STUDIES 9 - Emerald 2526 </h5>
+                    <img src="https://storage.googleapis.com/oa_disk001/obfairview/67/classfeed/3756/cover_photo/1754021280-366.jpg">
+                    <p>
+                        2025-2026<br>
+                        PRINZ GABRIEL REYNOSO
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex">
+                <div class="card p-4 w-100" onclick="showAlert()">
+                    <h5> PHYSICAL EDUCATION 9 - Emerald 2526 </h5>
+                    <img src="https://storage.googleapis.com/oa_disk001/obfairview/67/classfeed/3580/cover_photo/1753926335-1332.png">
+                    <p>
+                        2025-2026<br>
+                        ALFRED CASES
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex">
+                <div class="card p-4 w-100" onclick="showAlert()">
+                    <h5> VALUES EDUCATION 9 - Emerald 2526 </h5>
+                    <img src="https://storage.googleapis.com/oa_disk001/obfairview/67/classfeed/3667/cover_photo/1753944001-2013.png">
+                    <p>
+                        2025-2026<br>
+                        BERNARD BUNTILE
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex">
+                <div class="card p-4 w-100" onclick="showAlert()">
+                    <h5> LEADERSHIP TRAINING 9 - Emerald 2526 </h5>
+                    <img src="https://storage.googleapis.com/oa_disk001/obfairview/67/classfeed/3962/cover_photo/1754565739-54.png">
+                    <p>
+                        2025-2026<br>
+                        FIRE MANODON
+                    </p>
+                </div>
+            </div>
+
+             <div class="col-lg-4 col-md-6 d-flex">
+                <div class="card p-4 w-100" onclick="showAlert()">
+                    <h5> ICT 9 - Emerald 2526 </h5>
+                    <img src="https://storage.googleapis.com/oa_disk001/obfairview/67/classfeed/3642/cover_photo/1753933585-719.png">
+                    <p>
+                        2025-2026<br>
+                        RENN SANTOS
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex">
+                <div class="card p-4 w-100" onclick="showAlert()">
+                    <h5> TLE 9 - Emerald AY 2526 </h5>
+                    <img src="https://storage.googleapis.com/oa_disk001/obfairview/67/classfeed/3678/cover_photo/1753944535-2116.png">
+                    <p>
+                        2025-2026<br>
                         HANNAH RUTH DEL BARRIO
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6 d-flex">
+                <div class="card p-4 w-100" onclick="showAlert()">
+                    <h5> SOCIAL STUDIES CLUB - FAIRVIEW </h5>
+                    <img src="https://storage.googleapis.com/oa_disk001/obfairview/67/classfeed/4026/cover_photo/1757548888-730.png">
+                    <p>
+                        2025-2026<br>
+                        JOMA FERNANDEZ
                     </p>
                 </div>
             </div>
@@ -179,7 +229,7 @@
 
     <script>
         function showAlert() {
-            alert("This subject is currently unavailable. Please try again later!");
+            alert("This subject cannot be accessible. Try again later.");
         }
     </script>
 
