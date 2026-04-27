@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <title>Q4 Skills Test</title>
        
- <style>
+    <style>
         * {
             box-sizing: border-box;
             font-family: 'Verdana', sans-serif;
@@ -37,7 +37,7 @@
 
         form {
             width: 350px;
-            height: 520px;
+            height: 550px; 
             border-radius: 15px;
             background-color: rgba(0,0,0,0.55);
             box-shadow: 2px 2px 2px rgba(0,0,0,0.32);
@@ -45,16 +45,17 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            padding-bottom: 20px;
         }
 
         .inputs {
-            padding: 30px;
+            padding: 30px 30px 10px 30px;
         }
 
         input[type="text"],
         input[type="password"] {
             width: 100%;
-            padding: 5px;
+            padding: 10px;
             margin: 5px 0;
             border-radius: 5px;
             border: 1px solid rgb(180,180,180);
@@ -63,26 +64,26 @@
         }
 
         .checkb {
-            margin: -10px 0 10px 0;
             text-align: left;
-            padding-left: 25px;
+            padding-left: 30px;
+            margin-bottom: 10px;
         }
 
-        #display {
-            color: white;
+        #answer {
+            color: #ffbaba;
             font-size: 12px;
             min-height: 16px;
-            margin-bottom: 10px;
             font-weight: 800;
-            font-style: italic;
+            margin: 5px 0;
         }
 
         .footer {
-            text-align: center;
-            padding: 0 25px 20px 25px;
+            padding: 0 30px;
+            margin-top: 5px;
         }
 
-        .footer button {
+        .footer button, 
+        .footer input[type="reset"] {
             width: 100%;
             padding: 10px;
             border-radius: 10px;
@@ -91,29 +92,39 @@
             color: white;
             cursor: pointer;
             font-size: 16px;
+            appearance: none;
+            display: block;
+        }
+
+        .footer button:hover,
+        .footer input[type="reset"]:hover {
+            filter: brightness(0.8);
+        }
+        
+        .footer button:disabled {
+            background-color: #666;
+            cursor: not-allowed;
         }
     </style>
 </head>
 <body>
     
-       <div class="container">
-        <form>
+    <div class="container">
+        <form id="loginForm">
             <div class="header">
                 <h1>LOG IN</h1>
-                <div class="Q1">                     
-                </div>
             </div>
 
             <div class="inputs">
-                <label for="uname">Username</label><br>
-                <input type="text" id="username" placeholder="spidermanz15" required><br>
+                <label for="username">Username</label><br>
+                <input type="text" id="username" placeholder="spidermanz15" required><br><br>
 
-                <label for="pwd">Password</label><br>
+                <label for="password">Password</label><br>
                 <input type="password" id="password" placeholder="Zpidey13" required>
             </div>
 
             <div class="checkb">
-                <input type="checkbox" id="checkboxID" onclick="checkBox()">
+                <input type="checkbox" id="checkboxID">
                 <label for="checkboxID">Remember</label>
             </div>
 
@@ -121,51 +132,45 @@
 
             <div class="footer">
                 <button type="button" id="loginbutton" onclick="authenticate()">Log In</button>
+            </div> 
+
+            <div class="footer">
+                <input type="reset" id="cancel" value="Cancel" onclick="clearMessage()">
             </div>
-
         </form>
-    </div>>
-
+    </div>
 
     <script>
-
         let attempt_counter = 0;
 
-        function authenticate() {
+        function clearMessage() {
+            // Clears the "Incorrect" message when Cancel is pressed
+            document.getElementById("answer").innerHTML = "";
+        }
 
+        function authenticate() {
             let username = document.getElementById("username").value;
             let password = document.getElementById("password").value;
+            let answerDisplay = document.getElementById("answer");
 
             let granted = "Welcome " + username + "!";
-            let denied = "Access denied! Account locked after 3 attempts. Please try again after 1 hour.";
+            let denied = "Access denied! Account locked after 3 attempts.";
 
-            while (attempt_counter < 3) {
-
-
-                if (username === "spidermanz15" && password === "Zpidey13") {
-                    alert(granted);
-                    attempt_counter = 0;
-
-                    document.getElementById("answer").innerHTML = "";
-
-                    window.location.href = "notebooks.html";
-
-                    break;
-                }
-
-                else {
-                    attempt_counter++;
-
-                    document.getElementById("answer").innerHTML =
-                        "Incorrect username or password. Attempt " + attempt_counter + " of 3";
-
-                    break;
-                }
-                  }
+            if (username === "spidermanz15" && password === "Zpidey13") {
+                alert(granted);
+                attempt_counter = 0;
+                answerDisplay.innerHTML = "";
+                window.location.href = "notebooks.html";
+            } else {
+                attempt_counter++;
+                answerDisplay.innerHTML = "Incorrect username or password. Attempt " + attempt_counter + " of 3";
+            }
 
             if (attempt_counter >= 3) {
                 alert(denied);
                 document.getElementById("loginbutton").disabled = true;
+                document.getElementById("username").disabled = true;
+                document.getElementById("password").disabled = true;
             }
         }
     </script>
